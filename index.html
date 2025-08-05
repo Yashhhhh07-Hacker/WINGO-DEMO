@@ -1,37 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>WinGo Demo Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>WinGo Deluxe Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wallet">
-        <span id="wallet-balance">₹1000.00</span>
-        <button onclick="resetBalance()">Reset Balance</button>
+  <div class="main-bg">
+    <div class="winGo-header">
+      <img src="https://i.imgur.com/kdUZ3uB.png" alt="Logo" class="site-logo">
+      <div class="wallet-card">
+        <div>
+          <div class="wallet-title">Wallet balance</div>
+          <div id="wallet-balance" class="wallet-balance">₹1000.00</div>
+        </div>
+        <div class="wallet-actions">
+          <button class="wallet-btn withdraw" onclick="alert('Demo Only!')">Withdraw</button>
+          <button class="wallet-btn deposit" onclick="resetBalance()">Deposit</button>
+        </div>
+      </div>
     </div>
-    <div class="timer">
-        <span>Time remaining: <span id="timer">30</span> sec</span>
+    <div class="tabs-row">
+      <button class="tab active">WinGo 30sec</button>
+      <button class="tab">WinGo 1 Min</button>
+      <button class="tab">WinGo 3 Min</button>
+      <button class="tab">WinGo 5 Min</button>
     </div>
-    <div class="bet-options">
-        <h3>Choose Color:</h3>
-        <button onclick="selectBet('Green')">Green</button>
-        <button onclick="selectBet('Violet')">Violet</button>
-        <button onclick="selectBet('Red')">Red</button>
-        <br>
-        <h3>Choose Number:</h3>
-        <div id="numbers"></div>
-        <input type="number" id="bet-amount" min="10" max="500" value="10">
-        <button onclick="placeBet()">Place Bet</button>
+    <div class="round-card">
+      <div class="round-info">
+        <span>How to play</span>
+        <span class="time-box">
+          <span>Time remaining</span>
+          <span id="timer" class="timer-main">30</span>
+        </span>
+      </div>
+      <div class="history-balls" id="history-list">
+      </div>
     </div>
-    <div class="results">
-        <h3>Game Result:</h3>
-        <span id="game-result">-</span>
+    <div class="bet-area">
+      <div class="bet-row">
+        <button class="bet-btn green" onclick="selectBet('Green')">Green</button>
+        <button class="bet-btn violet" onclick="selectBet('Violet')">Violet</button>
+        <button class="bet-btn red" onclick="selectBet('Red')">Red</button>
+      </div>
+      <div class="numbers-row" id="numbers"></div>
+      <div class="input-row">
+        <input type="number" min="10" max="500" value="10" id="bet-amount" class="bet-input">
+        <button class="bet-place" onclick="placeBet()">Place Bet</button>
+      </div>
     </div>
-    <div class="history">
-        <h3>Game History:</h3>
-        <div id="history-list"></div>
+    <div class="result-display">
+      <span id="game-result">Place your bet to start!</span>
     </div>
-    <script src="script.js"></script>
+  </div>
+  <footer>
+    <div class="footer-note">
+      Demo version – No real money gambling. Inspired by WinGo / Tiranga.
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
