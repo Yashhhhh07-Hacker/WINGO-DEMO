@@ -1,0 +1,57 @@
+body {
+    background: #222b63;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    max-width: 480px;
+    margin: auto;
+    padding: 20px;
+}
+.wallet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #23306b;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.wallet button {
+    background: #3275d3;
+    border: none;
+    color: #fff;
+    padding: 7px 16px;
+    border-radius: 5px;
+}
+.timer {
+    font-size: 1.2em;
+    margin-bottom: 13px;
+}
+.bet-options h3 {
+    margin: 10px 0 3px;
+}
+.bet-options button {
+    background: #263c80;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin: 2px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+#numbers button {
+    width: 32px; height: 32px;
+    margin: 2px;
+    border-radius: 50%;
+    border: none;
+}
+.results, .history {
+    margin-top: 25px;
+}
+#game-result {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.history {
+    max-height: 160px;
+    overflow-y: auto;
+}

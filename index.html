@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WinGo Demo Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wallet">
+        <span id="wallet-balance">₹1000.00</span>
+        <button onclick="resetBalance()">Reset Balance</button>
+    </div>
+    <div class="timer">
+        <span>Time remaining: <span id="timer">30</span> sec</span>
+    </div>
+    <div class="bet-options">
+        <h3>Choose Color:</h3>
+        <button onclick="selectBet('Green')">Green</button>
+        <button onclick="selectBet('Violet')">Violet</button>
+        <button onclick="selectBet('Red')">Red</button>
+        <br>
+        <h3>Choose Number:</h3>
+        <div id="numbers"></div>
+        <input type="number" id="bet-amount" min="10" max="500" value="10">
+        <button onclick="placeBet()">Place Bet</button>
+    </div>
+    <div class="results">
+        <h3>Game Result:</h3>
+        <span id="game-result">-</span>
+    </div>
+    <div class="history">
+        <h3>Game History:</h3>
+        <div id="history-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
