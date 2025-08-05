@@ -1,57 +1,209 @@
-body {
-    background: #222b63;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    max-width: 480px;
-    margin: auto;
-    padding: 20px;
+body, html {
+  background: #202963;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #fff;
 }
-.wallet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #23306b;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
+.main-bg {
+  max-width: 425px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 0 0 25px 0;
 }
-.wallet button {
-    background: #3275d3;
-    border: none;
-    color: #fff;
-    padding: 7px 16px;
-    border-radius: 5px;
+.winGo-header {
+  padding: 16px 12px 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.timer {
-    font-size: 1.2em;
-    margin-bottom: 13px;
+.site-logo {
+  width: 130px;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 4px 16px rgba(22,36,74,0.2));
 }
-.bet-options h3 {
-    margin: 10px 0 3px;
+.wallet-card {
+  background: linear-gradient(112deg, #293981 60%, #203872 100%);
+  border-radius: 18px;
+  box-shadow: 0 7px 20px #1e2a5a44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
+  width: 100%;
+  max-width: 340px;
 }
-.bet-options button {
-    background: #263c80;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;
-    padding: 8px 15px;
-    cursor: pointer;
+.wallet-title {
+  font-size: 0.98em;
+  opacity: 0.85;
 }
-#numbers button {
-    width: 32px; height: 32px;
-    margin: 2px;
-    border-radius: 50%;
-    border: none;
+.wallet-balance {
+  font-size: 1.55em;
+  font-weight: 700;
+  color: #51f2c2;
 }
-.results, .history {
-    margin-top: 25px;
+.wallet-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
-#game-result {
-    font-weight: bold;
-    font-size: 1.3em;
+.wallet-btn {
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 7px 16px;
+  border-radius: 7px;
+  transition: box-shadow .12s;
+  cursor: pointer;
+  font-weight: 600;
 }
-.history {
-    max-height: 160px;
-    overflow-y: auto;
+.wallet-btn.withdraw {
+  background: #e73c3c;
+  color: #fff;
+}
+.wallet-btn.deposit {
+  background: #36dfac;
+  color: #153658;
+}
+.tabs-row {
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  width: 98%;
+}
+.tab {
+  background: #253067;
+  color: #a0b1dc;
+  border: none;
+  border-radius: 15px 15px 5px 5px;
+  padding: 10px 13px 5px 13px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 0 1px;
+  transition: background .13s,color .13s;
+}
+.tab.active {
+  background: #43e1cf;
+  color: #103043;
+  font-weight: bold;
+}
+.round-card {
+  background: #232e54;
+  border-radius: 17px;
+  margin: 17px 0 0 0;
+  padding: 12px 18px;
+  width: 97%;
+  max-width: 400px;
+  margin-left: auto; margin-right: auto;
+  box-shadow: 0 2px 18px #1a1a2e66;
+}
+.round-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #31457933;
+}
+.time-box {
+  display: flex; flex-direction: column; align-items: flex-end;
+}
+.timer-main {
+  font-size: 1.47em;
+  font-weight: 700;
+  color: #46fff3;
+}
+.history-balls {
+  margin: 9px 0 0; display: flex; gap: 7px;
+}
+.bchip {
+  width: 27px; height: 27px;
+  display: flex; align-items: center; justify-content: center;
+  background: #313E68;
+  border-radius: 50%;
+  font-weight: 700; font-size: 1.01em;
+  box-shadow: 0 0 5px #3b5160;
+  border: 2.7px solid #fff;
+}
+.bchip.green  { background: radial-gradient(circle at 60% 40%, #20ee8c 67%, #007542 100%); color: #134c2e; }
+.bchip.red    { background: radial-gradient(circle at 60% 40%, #fd5c5c 68%, #b82034 100%); color: #57080c; }
+.bchip.violet { background: radial-gradient(circle at 40% 50%, #d27bfc 67%, #6b24af 100%); color: #43126e; }
+.bet-area {
+  width: 98%; max-width: 400px;
+  margin: 24px auto 0; padding: 18px 8px 12px 8px;
+  background: #232e54;
+  border-radius: 15px; box-shadow: 0 2px 18px #1a1a2e66;
+}
+.bet-row {
+  display: flex; justify-content: space-between; margin-bottom: 12px;
+}
+.bet-btn {
+  flex: 1;
+  margin: 0 5px; padding: 16px 0;
+  border: none; border-radius: 12px;
+  font-weight: 600; font-size: 1.1em;
+  color: #fff;
+  box-shadow: 0 2px 18px #05051e1a;
+  cursor: pointer; transition: filter .17s;
+}
+.bet-btn.green  { background: linear-gradient(120deg, #1de8aa 60%, #29c576 100%);}
+.bet-btn.violet { background: linear-gradient(120deg, #b470e6 70%, #7c41ba 100%);}
+.bet-btn.red    { background: linear-gradient(120deg, #ff5252 63%, #d51251 100%);}
+.bet-btn:active { filter: brightness(1.18);}
+.numbers-row {
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  padding-top: 8px;
+}
+.number-btn {
+  width: 48px; height: 48px;
+  margin: 3px;
+  border-radius: 50%;
+  font-weight: bold; font-size: 1.15em;
+  border: 2.2px solid #fff2;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 7px #28448F70;
+  cursor: pointer; transition: transform .17s, border-color .17s;
+}
+.number-btn.selected {
+  border-color: #44ecd7;
+  transform: scale(1.13);
+  background: #eaf9ff;
+  color: #1b5e62;
+}
+.input-row {
+  display: flex; gap: 9px; margin-top: 13px;
+  align-items: center; justify-content: center;
+}
+.bet-input {
+  width: 85px; font-size: 1em; border-radius: 7px;
+  border: 1.4px solid #69cac91a;
+  padding: 6px 11px;
+  margin-right: 10px;
+}
+.bet-place {
+  background: linear-gradient(120deg, #31ffad 70%, #2196f3);
+  font-weight: bold; color: #fff;
+  border-radius: 8px;
+  border: none; font-size: 1.04em; padding: 11px 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #39ffee55;
+  transition: filter .17s;
+}
+.bet-place:active { filter: brightness(1.11);}
+.result-display {
+  text-align: center; margin: 18px 0 0 0;
+  font-size: 1.15em; font-weight: bold;
+  background: #212d59;
+  border-radius: 10px; max-width: 400px; margin-left: auto; margin-right: auto; padding: 9px 0;
+  box-shadow: 0 2px 8px #28448F12;
+}
+.footer-note {
+  color: #f7f7f7; opacity: 0.6; text-align: center; font-size: 0.96em;
+  margin-top: 30px; padding: 13px;
+}
+@media (max-width: 440px) {
+  .main-bg { padding: 0; }
+  .wallet-card {flex-direction: column; align-items: flex-start;}
+  .wallet-actions { flex-direction: row; gap: 11px;}
 }
